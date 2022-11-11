@@ -1,0 +1,157 @@
+---
+title: "Gens Ordinadors i Malalties Genètiques"
+author: "Alex Sanchez"
+output:
+  html_document:
+    code_folding: show
+    toc: yes
+    toc_float:
+      toc_collapsed: yes
+    toc_depth: 3
+    theme: cosmo
+    highlight: textmate
+    number_sections: yes
+    self_contained: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Presentació
+
+La biologia del segle XXI: sense ordinadors, res de res...
+
+Podeu començar amb la presentació [Gens Ordinadors i Malalties
+Genètiques](https://drive.google.com/file/d/1HLJ_faDjSpBxrgJzcA13HvuOLwx5DuLu/view?usp=share_link)
+
+# Activitats
+
+## Que fa la meva seqüència?
+
+### Les seqüències
+
+El requadre que teniu més avall conté vuit seqüències de nucleòtids, que
+sospitem associades a alguna malatia genètica. La vostra missió serà
+esbrinar de quina malaltia es tracta i recollir una mínima informació
+sobre aquesta.
+
+```{r}
+Sequence_A <- "ATGCTCACATTCATGGCCTCTGACAGCGAGGAAGAAGTGTGTGATGAGCGGACGTCCCTAATGTCGGCCGAGAGCCCCACGCCGCGCTCCTGCCAGGAGGGCAGGCA GGGCCCAGAGGATGGAG"
+
+Sequence_B <- "ATGTTTTATACAGGTGTAGCCTGTAAGAGATGAAGCCTGGTATTTATAGAAATTGACTTATTTTATTCTCATATTTACATGTGCATAATTTTCCATATGCCAGAAAAGTTGAATAGTATCAGATTCCAAATCT"
+ 
+Sequence_C <- "ATGTTGTGCAATATCCATCTACTGTAGTTAAGATATTCAGTAGTTTGTTTTTCATAAGCATGTAATTGATCATATTTCTGCCAAGGATGTGCCTTCAACTTTATAATTATAGTGTTGTAAAATATTTTTGTCTG"
+ 
+Sequence_D <- "ATGGCGACCCTGGAAAAGCTGATGAAGGCCTTCGAGTCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCC"
+
+Sequence_E <- "ATGCGTCGAGGGCGTCTGCTGGAGATCGCCCTGGGATTTACCGTGCTTTTAGCGTCCTACACGAGCCATGGGGCGGACGCCAATTTGGAGGCTGGGAACGTGAAGGAAACCAGAGCCAGTCGGGCC"
+
+Sequence_F <- "ATGCCATCTTCCTTGATGTTGGAGGTACCTGCTCTGGCAGATTTCAACCGGGCTTGGACAGAACTTACCGACTGGCTTTCTCTGCTTGATCAAGTTATAAAATCACAGAGGGTGATGGTGGGTGACCTT"
+ 
+Sequence_G <- "ATG CCG CCC AAAACCCCCCGAAAAACGGCCGCCACCGCCGCCGCTGCCGCCGCGGAACCCCCGGCACCGCCGCCGCCGCCCCCTCCTGAGGAGGACCCAGAGCAGGACAGCGGCCCGGAGGAC"
+ 
+Sequence_H <- "ATGGCGGGTCTGACGGCGGCGGCCCCGCGGCCCGGAGTCCTCCTGCTCCTGCTGTCCATCCTCCACCCCTCTCGGCCTGGAGGGGTCCCTGGGGCCATTCCTGGTGGAGTTCCTGGAGGAGTCTT"
+
+Sequence_I <- "CCTGGTTTTAAAGATCCTGTGTACCGTGCAAGACGGAAGCAGTTTGCTGACATTGCCTACAACTACCGCCATGGGCAGCCCATCCCTCGAGTGGAATACATGGAGGAAGAAAAGAAAACA"
+
+Sequence_J <- "ACCAGGTTCAGCAACTTCTTGTCTCAATCACCCTTCAGTCAGAGTGTGATGCTTTCCCCAACATATCTTCAGATGAGTCTTATACTTTACTTGTGAAAGAACCAGTGGCTGTCCTTAAGGCCAACAGATTTGGGGAGCATTACGAGGTTTAGAGACCT"
+```
+
+### Les eines de (re)cerca
+
+-   El centre de control: [NCBI](http://www.ncbi.nlm.nih.gov)
+
+#### Identifiquem el gen
+
+-   Escull una seqüència de la llista anterior. Selecciona-la i copia-la
+    al portapapers (pots incloure el nom o no fer-ho)
+-   Ves al lloc web del NCBI i allà escull l'opció **BLAST** del menu de
+    la dreta. Escull l'opció de ''fer cerca per seqüències de
+    nucleòtids''.
+-   Enganxa la teva seqüència a la caps de cerca i prem "enviar"
+-   Un cop finalitzada la cerca explora el resultats
+    -   Ha trobat a quin gen pertany la seqüència?
+    -   De quin gen es tracta?
+
+#### Identifiquem la malaltia
+
+Els gens seleccionats estan (probablememnt) relacionats amb alguna
+malaltia. Anem a mirar d'esbrinar de quina es tracta
+
+1.  Ves a la pàgina principal del NCBI
+
+2.  Selecciona al menu "**Genetics and Medicine**" de l'Esquerra"
+
+3.  Quan s'obri la nova finestra ves a "**Online Mendelian Inheritance
+    in Man" (OMIM)**
+
+4.  Entra el teu gen a la barra de cerca de la mira de determinar de
+    quina malaltia es tracta.
+
+#### Descrivim el gen i la proteina
+
+Un cop determinat de quin gen es tracta podem mirar de saber més coses
+sobre ell
+
+#### En quin lloc del genoma es troba?
+
+-   Com és el gen? Per exemple de quants ''exons i introns consta?
+-   Per quina proteina codifica?
+-   Podem trobar una imatge de l'estructura 3D de la proteïna?
+
+#### Descrivim una mica la malatia
+
+Ara que sabem de quina malaltia es tracta **podem mirar de
+caracteritzar-la**
+
+1.  Què la causa?
+
+    1.  És autosòmica o lligada al sexe?
+
+    2.  És una mutació cromossòmica o gènica
+
+2.  Com s'hereda?
+
+3.  Quines són les característiques principals de la malaltia?
+
+4.  Té tractament?
+
+5.  Es pot preveure?
+
+6.  Com est detecta?
+
+## Resultats de l'estudi
+
+### Recopilem la informació
+
+Fent clic en el següent enllaç accediras a un full de càlcul de "google
+docs" on pots anotar de forma endreçada les teves respostes.
+
+-   [Enllaç al full de
+    resultats](https://docs.google.com/spreadsheet/ccc?key=0Apz6KCcu8_mcdFNOOFlhWTJJcGhEX1JISlZKWEszWnc&usp=sharing)
+
+Mira de proporcionar les informacions que et demanen i, si se te
+n'ocorre alguna més, pots afegir-la,
+
+### Expliquem el que hem fet i el que hem trobat
+
+Una part important de la recerca és la comunicació dels resultats.
+
+-   Prepareu una presentació (powerpoint/prezi) llampec on
+    -   Presenteu el vostre problema
+    -   Explique que heu fet per resoldre'l
+    -   Exposeu els resultats obtinguts
+    -   Comenteu el que heu fet.
+
+### Per saber-ne més: recursos, enllaços i coses
+
+-   [Les estadístiques del
+    genoma](http://e2013.wordpress.com/2013/03/11/les-estadistiques-del-genoma/)
+-   [The Story of the Human Genome Project -- A Short
+    Narration](http://exploreable.wordpress.com/2011/05/03/the-story-of-the-human-genome-project-a-short-narration/)
+-   Materials d'introducció a la Bioinformàtica
+    -   [El projecte "Genoma Humà"](http://www.genome.gov/10001772)
+    -   [Curs de Bioinformàtica per a la Recerca
+        Biomèdica](https://uebvhir.github.io/Course_Bioinformatics_2022.html)
+    -   [Lesson Plans and Hands-on Activities for Bioinformatics
+        Curriculum](http://www.iscb.org/bioinformatics-resources-for-high-schools/lesson-plans-for-bioinformatics-curriculum)
