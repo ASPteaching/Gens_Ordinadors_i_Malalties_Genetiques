@@ -1,0 +1,139 @@
+---
+title: "Genes, Ordenadores y Enfermedades Genéticas"  
+author: "Alex Sanchez"  
+output:  
+  html_document:  
+    code_folding: show  
+    toc: yes  
+    toc_float:  
+      toc_collapsed: yes  
+    toc_depth: 3  
+    theme: cosmo  
+    highlight: textmate  
+    number_sections: yes  
+    self_contained: true  
+editor:  
+  markdown:  
+    wrap: 72
+---
+
+# Presentación
+
+La biología del siglo XXI: sin ordenadores, nada de nada...
+
+Podéis comenzar con la presentación [Genes, Ordenadores y Enfermedades Genéticas](https://drive.google.com/file/d/1HLJ_faDjSpBxrgJzcA13HvuOLwx5DuLu/view?usp=share_link)
+
+# Actividades
+
+## ¿Qué hace mi secuencia?
+
+### Las secuencias
+
+El recuadro que tenéis más abajo contiene ocho secuencias de nucleótidos, que sospechamos están asociadas a alguna enfermedad genética. Vuestra misión será averiguar de qué enfermedad se trata y recopilar información mínima sobre ella.
+
+```{r}
+Sequence_A <- "ATGCTCACATTCATGGCCTCTGACAGCGAGGAAGAAGTGTGTGATGAGCGGACGTCCCTAATGTCGGCCGAGAGCCCCACGCCGCGCTCCTGCCAGGAGGGCAGGCA GGGCCCAGAGGATGGAG"
+
+Sequence_B <- "ATGTTTTATACAGGTGTAGCCTGTAAGAGATGAAGCCTGGTATTTATAGAAATTGACTTATTTTATTCTCATATTTACATGTGCATAATTTTCCATATGCCAGAAAAGTTGAATAGTATCAGATTCCAAATCT"
+ 
+Sequence_C <- "ATGTTGTGCAATATCCATCTACTGTAGTTAAGATATTCAGTAGTTTGTTTTTCATAAGCATGTAATTGATCATATTTCTGCCAAGGATGTGCCTTCAACTTTATAATTATAGTGTTGTAAAATATTTTTGTCTG"
+ 
+Sequence_D <- "ATGGCGACCCTGGAAAAGCTGATGAAGGCCTTCGAGTCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCC"
+
+Sequence_E <- "ATGCGTCGAGGGCGTCTGCTGGAGATCGCCCTGGGATTTACCGTGCTTTTAGCGTCCTACACGAGCCATGGGGCGGACGCCAATTTGGAGGCTGGGAACGTGAAGGAAACCAGAGCCAGTCGGGCC"
+
+Sequence_F <- "ATGCCATCTTCCTTGATGTTGGAGGTACCTGCTCTGGCAGATTTCAACCGGGCTTGGACAGAACTTACCGACTGGCTTTCTCTGCTTGATCAAGTTATAAAATCACAGAGGGTGATGGTGGGTGACCTT"
+ 
+Sequence_G <- "ATG CCG CCC AAAACCCCCCGAAAAACGGCCGCCACCGCCGCCGCTGCCGCCGCGGAACCCCCGGCACCGCCGCCGCCGCCCCCTCCTGAGGAGGACCCAGAGCAGGACAGCGGCCCGGAGGAC"
+ 
+Sequence_H <- "ATGGCGGGTCTGACGGCGGCGGCCCCGCGGCCCGGAGTCCTCCTGCTCCTGCTGTCCATCCTCCACCCCTCTCGGCCTGGAGGGGTCCCTGGGGCCATTCCTGGTGGAGTTCCTGGAGGAGTCTT"
+
+Sequence_I <- "CCTGGTTTTAAAGATCCTGTGTACCGTGCAAGACGGAAGCAGTTTGCTGACATTGCCTACAACTACCGCCATGGGCAGCCCATCCCTCGAGTGGAATACATGGAGGAAGAAAAGAAAACA"
+
+Sequence_J <- "ACCAGGTTCAGCAACTTCTTGTCTCAATCACCCTTCAGTCAGAGTGTGATGCTTTCCCCAACATATCTTCAGATGAGTCTTATACTTTACTTGTGAAAGAACCAGTGGCTGTCCTTAAGGCCAACAGATTTGGGGAGCATTACGAGGTTTAGAGACCT"
+```
+
+### Las herramientas de (re)búsqueda
+
+-   El centro de control: [NCBI](http://www.ncbi.nlm.nih.gov)
+
+#### Identificamos el gen
+
+-   Elige una secuencia de la lista anterior. Selecciónala y cópiala al portapapeles (puedes incluir el nombre o no hacerlo).
+-   Ve al sitio web del NCBI y allí selecciona la opción **BLAST** del menú de la derecha. Elige la opción de "buscar por secuencias de nucleótidos".
+-   Pega tu secuencia en el campo de búsqueda y presiona "enviar".
+-   Una vez finalizada la búsqueda, explora los resultados:
+    -   ¿Ha encontrado a qué gen pertenece la secuencia?
+    -   ¿De qué gen se trata?
+
+#### Identificamos la enfermedad
+
+Los genes seleccionados están (probablemente) relacionados con alguna enfermedad. Vamos a intentar averiguar de cuál se trata.
+
+1.  Ve a la página principal del NCBI.
+
+2.  Selecciona en el menú "**Genetics and Medicine**" de la izquierda.
+
+3.  Cuando se abra la nueva ventana, ve a "**Online Mendelian Inheritance in Man (OMIM)**".
+
+4.  Introduce tu gen en la barra de búsqueda para tratar de determinar de qué enfermedad se trata.
+
+#### Describimos el gen y la proteína
+
+Una vez determinado de qué gen se trata, podemos tratar de saber más cosas sobre él.
+
+#### ¿En qué lugar del genoma se encuentra?
+
+-   ¿Cómo es el gen? Por ejemplo, ¿de cuántos exones e intrones consta?
+-   ¿Para qué proteína codifica?
+-   ¿Podemos encontrar una imagen de la estructura 3D de la proteína?
+
+#### Describimos un poco la enfermedad
+
+Ahora que sabemos de qué enfermedad se trata, **podemos tratar de caracterizarla**.
+
+1.  ¿Qué la causa?
+
+    1.  ¿Es autosómica o ligada al sexo?
+
+    2.  ¿Es una mutación cromosómica o génica?
+
+2.  ¿Cómo se hereda?
+
+3.  ¿Cuáles son las principales características de la enfermedad?
+
+4.  ¿Tiene tratamiento?
+
+5.  ¿Se puede prevenir?
+
+6.  ¿Cómo se detecta?
+
+## Resultados del estudio
+
+### Recopilemos la información
+
+Haciendo clic en el siguiente enlace accederás a una hoja de cálculo de "google docs" donde puedes anotar tus respuestas de forma organizada.
+
+-   [Enlace a la hoja de resultados](https://docs.google.com/spreadsheet/ccc?key=0Apz6KCcu8_mcdFNOOFlhWTJJcGhEX1JISlZKWEszWnc&usp=sharing)
+
+Trata de proporcionar la información que se solicita y, si se te ocurre alguna más, puedes añadirla.
+
+### Expliquemos lo que hemos hecho y lo que hemos encontrado
+
+Una parte importante de la investigación es la comunicación de los resultados.
+
+-   Prepara una presentación (powerpoint/prezi) breve donde:
+    -   Presentes tu problema
+    -   Expliques qué has hecho para resolverlo
+    -   Expongas los resultados obtenidos
+    -   Comentes lo que has hecho.
+
+### Para saber más: recursos, enlaces y cosas
+
+-   [Las estadísticas del genoma](http://e2013.wordpress.com/2013/03/11/les-estadistiques-del-genoma/)
+-   [The Story of the Human Genome Project -- A Short Narration](http://exploreable.wordpress.com/2011/05/03/the-story-of-the-human-genome-project-a-short-narration/)
+-   Materiales de introducción a la Bioinformática
+    -   [El proyecto "Genoma Humano"](http://www.genome.gov/10001772)
+    -   [Curso de Bioinformática para la Investigación Biomédica](https://uebvhir.github.io/Course_Bioinformatics_2022.html)
+    -   [Lesson Plans and Hands-on Activities for Bioinformatics Curriculum](http://www.iscb.org/bioinformatics-resources-for-high-schools/lesson-plans-for-bioinformatics-curriculum)
+
